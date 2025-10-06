@@ -1,0 +1,24 @@
+.footer {
+   background-color: #111010; /* Darker background */
+   color: #fff; /* White text */
+   padding: 20px 0; /* Padding for top and bottom */
+   text-align: center;
+ }
+ 
+ .footer-content p {
+   margin: 5px 0; /* Space between paragraphs */
+   font-size: 16px;
+ }
+ 
+ .footName {
+   font-size: 18px;
+   font-weight: bold;
+ }
+ .footName span{
+   font-size: 12px;
+ }
+ 
+ .footer-content p:nth-child(3), .footer-content p:nth-child(4) {
+   font-size: 15px; /* Slightly smaller font for the address and contact */
+ }
+ 

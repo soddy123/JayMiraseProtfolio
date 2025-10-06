@@ -1,0 +1,88 @@
+.App {
+	margin-top: 50px;
+	text-align: center;
+	width: 100vw; /* Full screen width */
+	height: 250px; /* Fixed height for the component */
+	overflow: hidden;
+	padding: 0 200px; /* Adds gap to the left and right side of the component */
+ }
+ 
+ .title {
+	margin-bottom: 20px;
+	font-size: 3rem;
+ }
+ 
+ .image_wrapper {
+	margin: 0px 30px; /* Adds gap between images */
+	display: inline-block;
+ }
+ 
+ .image_wrapper img {
+	width: 120px;  /* Fixed width for the images */
+	height: 200px; /* Fixed height for the images */
+	object-fit: contain; /* Ensures the images don't distort */
+	display: block;
+	margin: 0 auto;
+ }
+ 
+ .marquee_container {
+	position: relative;
+ }
+ 
+ .marquee_container::before,
+ .marquee_container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 50px;
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+ }
+ 
+ .marquee_container::before {
+	left: 20;
+	background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+ }
+ 
+ .marquee_container::after {
+	right: 20;
+	background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+ }
+ 
+ @media (max-width: 768px) {
+	.title {
+	  font-size: 1.2rem;
+	}
+ 
+	.image_wrapper {
+	  margin: 0px 20px; /* Adjusted gap between images for tablets */
+	}
+ 
+	.image_wrapper img {
+	  width: 100px;
+	  height: 180px;
+	}
+ }
+ 
+ @media (max-width: 480px) {
+	.App {
+	  margin-top: 30px;
+	  height: 220px;
+	  padding: 0 10px; /* Reduced padding on smaller screens */
+	}
+ 
+	.title {
+	  font-size: 1rem;
+	}
+ 
+	.image_wrapper {
+	  margin: 0px 10px; /* Smaller gap between images for mobile */
+	}
+ 
+	.image_wrapper img {
+	  width: 80px;
+	  height: 160px;
+	}
+ }
+ 

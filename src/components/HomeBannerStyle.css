@@ -1,0 +1,150 @@
+.home .content {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   justify-content: center;
+   padding-left: 12vw;
+   margin-bottom: 50px;
+}
+
+.home .content .wrapper {
+   width: 100%;
+}
+
+.home .content .name {
+   white-space: nowrap;
+   font-size: 25px;
+   font-weight: 500;
+   letter-spacing: 0.3em;
+   text-transform: uppercase;
+   height: fit-content;
+   width: fit-content;
+   padding-left: 5px;
+   margin-bottom: 8px;
+   position: relative; /* To position the underline */
+}
+
+.home .content .name::after {
+   content: ''; /* Empty content for the underline */
+   position: absolute;
+   bottom: 0; /* Position it at the bottom of the name */
+   left: 0; /* Start at the left */
+   width: 0%; /* Start with 0% width */
+   height: 3px; /* Height of the underline */
+   background-color: #fff; /* White color for the underline */
+   transition: width 0.5s ease; /* Smooth transition for the underline */
+}
+
+.home .content .name:hover::after {
+   width: 100%; /* On hover, the underline extends to full width */
+}
+
+.home .content .staticTitle {
+   font-size: 70px; /* Change font size to 50px */
+   font-weight: 500;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   height: fit-content;
+   width: fit-content;
+   line-height: 1; /* Decrease the line gap (you can adjust this value) */
+}
+
+.home .content .staticTitle .hrLine {
+   border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+   margin-left: 20px;
+   width: 20vw;
+}
+
+.home .content .dynamicTitle {
+   font-size: 70px; /* Change font size to 50px */
+   font-weight: 500;
+   line-height: 1.2; /* Decrease the line gap (you can adjust this value) */
+   width: fit-content;
+}
+
+.home .content .dynamicTitle li {
+   width: 100%;
+   z-index: -1;
+}
+
+@keyframes slider {
+   0%   {width: 0%; }
+   50% {width: 42%; }
+   100% {width: 0%;}
+}
+
+@keyframes fadeText {
+   0%   {opacity: 0;}
+   100% {opacity: 0;}
+}
+
+ .home .content .dynamicTitle li span {
+   white-space: wrap;
+   background-image: linear-gradient(to right, #9fcafe, #4b2be9, #f32cc4);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   z-index: -1;
+ }
+
+ .home .content .dynamicTitle li span::before {
+   content: '';
+   width: 100%;
+   height: 20%;
+   z-index: -1;
+ }
+
+.mask .bg {
+   height: 80vh;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   padding-right: 8vw;
+   z-index: -3;
+}
+
+@media screen and (max-width: 950px) {
+   .mask .bg{
+       opacity: 40%;
+       padding: 0;
+   }
+
+   .home .content .staticTitle {
+       font-size: 90px;
+   }
+
+   .home .content .dynamicTitle {
+       font-size: 90px;
+   }
+
+}
+
+@media screen and (max-width: 750px) {
+   .home .content{
+       align-items: center;
+       padding: 0 12vw;
+   }
+   .home .content .name {
+       font-size: 20px;
+       font-weight: 600;
+       line-height: 60px;
+   }
+
+   .home .content .staticTitle {
+       font-size: 12vw;
+   }
+
+   .home .content .staticTitle .hrLine {
+       width: 22vw;
+   }
+
+   .home .content .dynamicTitle {
+       font-size: 12vw;
+       line-height: 60px;
+   }
+
+   .hire {
+       font-size: 16px;
+   }
+}
