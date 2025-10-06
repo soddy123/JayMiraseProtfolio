@@ -1,6 +1,8 @@
 import React from 'react';
 import './SkillCardStyle.css';
-
+import degreeImg from "../images/degree3.jpg"
+import college from "../images/college.jpg"
+import school from "../images/school1.jpg"
 export default function Education({ id }) {
   return (
     <>
@@ -12,7 +14,7 @@ export default function Education({ id }) {
             {/* Card 1 */}
             <div className="flip-wrapper">
               <div className="flip-card">
-                <div className="flip-front front1"></div>
+                <div className="flip-front front1" style={{ backgroundImage: `url(${degreeImg})`}}></div>
                 <div className="flip-back">
                   <div className="flip-content">
                     <p className="degree">Bachelor of Engineering (Computer Science & Engineering), 2023</p>
@@ -26,7 +28,7 @@ export default function Education({ id }) {
             {/* Card 2 */}
             <div className="flip-wrapper">
               <div className="flip-card">
-                <div className="flip-front front2"></div>
+                <div className="flip-front front2"style={{ backgroundImage: `url(${college})`}}></div>
                 <div className="flip-back">
                   <div className="flip-content">
                     <p className="degree">Higher Secondary Education (Science), 2019</p>
@@ -40,7 +42,7 @@ export default function Education({ id }) {
             {/* Card 3 */}
             <div className="flip-wrapper">
               <div className="flip-card">
-                <div className="flip-front front3"></div>
+                <div className="flip-front front3 " style={{ backgroundImage: `url(${school})`}}></div>
                 <div className="flip-back">
                   <div className="flip-content">
                     <p className="degree">Secondary Education, 2017</p>
